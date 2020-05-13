@@ -1,0 +1,43 @@
+﻿<Window x:Class="UndoFunctionWithStack.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UndoFunctionWithStack"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btn1" Grid.Column="0" Content="1" Background="Red" Foreground="White" FontSize="40" Click="AddColor"/>
+            <Button x:Name="btn2" Grid.Column="1" Content="2" Background="Red" Foreground="White" FontSize="40" Click="AddColor"/>
+            <Button x:Name="btn3" Grid.Column="2" Content="3" Background="Red" Foreground="White" FontSize="40" Click="AddColor"/>
+            <Button x:Name="btn4" Grid.Column="3" Content="4" Background="Red" Foreground="White" FontSize="40" Click="AddColor"/>
+            <Button x:Name="btn5" Grid.Column="4" Content="5" Background="Red" Foreground="White" FontSize="40" Click="AddColor"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <ListBox x:Name="listBox" Grid.Row="0"></ListBox>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.ColumnSpan="2" Content="Undo" Foreground="White" FontSize="35" Background="#FF243445" Click="Undo"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
